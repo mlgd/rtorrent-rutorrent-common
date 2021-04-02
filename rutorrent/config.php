@@ -53,7 +53,7 @@
           "id"    => '/usr/bin/id',       // Something like /usr/bin/id. If empty, will be found in PATH.
           "stat"  => '/usr/bin/stat',     // Something like /usr/bin/stat. If empty, will be found in PATH.
           "pgrep" => '/usr/bin/pgrep',
-          "python"=> '/usr/bin/python',
+          "python"=> '/usr/bin/python3',
 	);
 
 	$localhosts = array( 			// list of local interfaces
@@ -71,4 +71,3 @@
 	$canUseXSendFile = false;		// If true then use X-Sendfile feature if it exist
 
 	$locale = "UTF8";
-
