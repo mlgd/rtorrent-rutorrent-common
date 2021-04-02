@@ -16,7 +16,8 @@ mkdir -p /downloads/.rtorrent/watch
 mkdir -p /downloads/.log/rtorrent
 if [ ! -e /downloads/.rtorrent/.rtorrent.rc ]; then
     cp /root/.rtorrent.rc /downloads/.rtorrent/
-    sed -i 's/network\.port_range.set *=.*$/network.port_range = '$INCOMING_PORT'/g' /downloads/.rtorrent/.rtorrent.rc
+    sed -i 's/network\.port_range\.set *=.*$/network.port_range.set = '$INCOMING_PORT'/g' /downloads/.rtorrent/.rtorrent.rc
+    sed -i 's/network\.port_random\.set *=.*$/network.port_random.set = no/g' /downloads/.rtorrent/.rtorrent.rc
     sed -i 's/dht\.port\.set *=.*$/dht.port.set = '$DHT_PORT'/g' /downloads/.rtorrent/.rtorrent.rc
 fi
 ln -s /downloads/.rtorrent/.rtorrent.rc /home/rtorrent/
